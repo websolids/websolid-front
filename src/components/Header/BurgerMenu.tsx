@@ -42,6 +42,7 @@ export const BurgerMenu = () => {
                 </Link>
               </nav>
               <Link
+                onClick={state.close}
                 href="#contacts"
                 className="button button--outline button--lg border-accent text-accent hover:bg-accent hover:text-white transition-colors flex w-full"
               >
