@@ -15,16 +15,16 @@ export default function Home() {
   return (
     <>
       <section
-        className="flex flex-col gap-10 pt-50 h-[calc(100dvh-72px)]"
+        className="flex flex-col gap-10 justify-center min-h-[calc(100dvh-72px)]"
         id="about"
       >
-        <div className="text-center max-w-200 mx-auto">
-          <h1 className="font-bold text-5xl mb-10">
+        <div className="text-center max-w-200 mx-auto shrink-0 mt-10">
+          <h1 className="font-bold text-3xl md:text-5xl mb-10">
             <span className="text-[#4C5EFF]">Веб</span>
             <span className="text-[#7A87FF]">Солид</span> — технологический
             партнер вашего роста
           </h1>
-          <p className="text-2xl">
+          <p className="text-xl md:text-2xl">
             Мы объединили глубокую техническую экспертизу в разработке с
             бизнес-аналитикой. Наша цель — не просто запустить сайт, а создать
             инструмент, который оптимизирует внутренние процессы компании и
@@ -39,13 +39,13 @@ export default function Home() {
           Проекты
         </Link>
 
-        <div className="flex-1 grid grid-cols-3 gap-10">
-          <div className="flex flex-col justify-end col-span-2">
-            <div className="relative grid grid-cols-2 py-20 rounded-t-3xl bg-white w-full px-5">
+        <div className="flex-1  grid xl:grid-cols-3 gap-10 shrink-0 -mt-60">
+          <div className="flex flex-col justify-end md:col-span-2">
+            <div className="relative flex flex-col md:grid md:grid-cols-2 p-5 md:px-0 md:py-20 rounded-3xl md:rounded-b-0 bg-white w-full">
               <div>
-                <div className="h-100 w-70 absolute bg-black bottom-15 left-10 rounded-3xl text-white p-4 flex flex-col gap-4 items-center">
+                <div className="md:h-100 md:w-70 md:absolute bg-black md:bottom-15 md:left-10 rounded-3xl text-white p-4 flex flex-col gap-4 items-center">
                   <h3 className="text-lg font-bold">Наши стандарты:</h3>
-                  <CircleLogo className="h-40" />
+                  <CircleLogo className="h-40 w-40" />
                   <ul className="flex flex-col gap-2">
                     <li>
                       <b>Прозрачность на каждом этапе</b>
@@ -59,7 +59,7 @@ export default function Home() {
                   </ul>
                 </div>
               </div>
-              <p className="text-2xl font-bold -ml-5">
+              <p className="text-2xl font-bold mt-4 md:mt-0 md:-ml-5">
                 <span className="text-[#4C5EFF]">Веб</span>
                 <span className="text-[#7A87FF]">Солид</span> - становимся
                 частью вашей команды, чтобы вместе создать проект, которым будем
@@ -67,7 +67,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="flex flex-col justify-end items-end pb-5">
+          <div className="flex flex-col items-center justify-end md:items-end pb-5">
             <div className="h-50 w-60 rounded-3xl bg-[#7A87FF] mb-20">
               <div className="h-50 w-60 rounded-3xl bg-black -rotate-9 translate-y-12 -translate-x-7 text-white text-2xl font-bold text-center flex items-center justify-center">
                 <p>
@@ -100,7 +100,7 @@ export default function Home() {
       <section id="projects" className="mt-10">
         <h2 className="text-4xl font-bold text-accent mb-10">Проекты:</h2>
         <div className="flex flex-col gap-8">
-          <div className="grid grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             <div className="p-3 rounded-xl bg-white">
               <Image
                 src="/projects/plyazh.webp"
@@ -116,27 +116,24 @@ export default function Home() {
                 Разработка современной платформы для сферы услуг и отдыха. Фокус
                 на UX/UI и удобство пользователя.
               </p>
-              <div className="grid grid-cols-3 gap-4 mb-2">
+              <div className="grid md:grid-cols-3 gap-4 mb-2">
                 <p className="flex gap-2 items-center">
                   <span>
                     <CalendarIcon />
                   </span>
-                  Система <br />
-                  бронирования
+                  Система бронирования
                 </p>
                 <p className="flex gap-2 items-center">
                   <span>
                     <PhoneIcon />
                   </span>
-                  Мобильная <br />
-                  версия
+                  Мобильная версия
                 </p>
                 <p className="flex gap-2 items-center">
                   <span>
                     <UsersIcon />
                   </span>
-                  Высокая <br />
-                  вовлеченность
+                  Высокая вовлеченность
                 </p>
               </div>
               <p>
@@ -165,20 +162,18 @@ export default function Home() {
                 Масштабный e-commerce проект для лидера рынка запчастей КАМАЗ.
                 Сложная структура каталога и высокая нагрузка.
               </p>
-              <div className="grid grid-cols-3 gap-4 mb-2">
+              <div className="grid md:grid-cols-3 gap-4 mb-2">
                 <p className="flex gap-2 items-center">
                   <span>
                     <CatalogIcon />
                   </span>
-                  Многоуровневый <br />
-                  каталог
+                  Многоуровневый каталог
                 </p>
                 <p className="flex gap-2 items-center">
                   <span>
                     <SyncIcon />
                   </span>
-                  Синхронизация <br />
-                  остатков
+                  Синхронизация остатков
                 </p>
                 <p className="flex gap-2 items-center">
                   <span>
@@ -190,8 +185,8 @@ export default function Home() {
               <p>Веб-сайт: В процессе разработки</p>
             </div>
           </div>
-          <div className="grid grid-cols-4">
-            <div className="p-10 rounded-xl border-2 border-white col-span-2 col-start-2 col-end-4 flex flex-col items-center text-center">
+          <div className="grid md:grid-cols-4">
+            <div className="p-10 rounded-xl border-2 border-white md:col-span-2 md:col-start-2 md:col-end-4 flex flex-col items-center text-center">
               <h3 className="text-xl font-bold mb-3">В разработке</h3>
               <p>
                 Ряд крупных корпоративных решений и систем автоматизации
@@ -236,41 +231,57 @@ export default function Home() {
           У нас компактная, но мощная core-команда, усиленная проверенными
           экспертами на аутсорсе
         </p>
-        <div className="grid grid-cols-3 mb-5 gap-6">
-          <div className="flex flex-col items-center">
+
+        {/* КАРУСЕЛЬ: На мобильных - скролл, на десктопе (md:) - сетка */}
+        <div className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar md:grid md:grid-cols-3 mb-10 gap-6 pb-4">
+          {/* Карточка 1 */}
+          <div className="flex flex-col items-center min-w-[80%] snap-center md:min-w-full">
             <Image
               src="/team/Камиль.webp"
               width={640}
               height={640}
               alt="Камиль"
-              className="rounded-2xl mb-3"
+              className="rounded-2xl mb-3 object-cover aspect-square"
             />
-            <h3 className="text-xl font-bold mb-1">Камиль Салихов</h3>
-            <p className="text-accent">И швец, и жнец, и на дуде игрец</p>
+            <h3 className="text-xl font-bold mb-1 text-center">
+              Камиль Салихов
+            </h3>
+            <p className="text-accent text-center">
+              И швец, и жнец, и на дуде игрец
+            </p>
           </div>
-          <div className="flex flex-col items-center">
+
+          {/* Карточка 2 */}
+          <div className="flex flex-col items-center min-w-[80%] snap-center md:min-w-full">
             <Image
               src="/team/Виктория.webp"
               width={640}
               height={640}
               alt="Виктория"
-              className="rounded-2xl mb-3"
+              className="rounded-2xl mb-3 object-cover aspect-square"
             />
-            <h3 className="text-xl font-bold mb-1">Виктория Денисова</h3>
-            <p className="text-accent">Руководитель проектов</p>
+            <h3 className="text-xl font-bold mb-1 text-center">
+              Виктория Денисова
+            </h3>
+            <p className="text-accent text-center">Руководитель проектов</p>
           </div>
-          <div className="flex flex-col items-center">
+
+          {/* Карточка 3 */}
+          <div className="flex flex-col items-center min-w-[80%] snap-center md:min-w-full">
             <Image
               src="/team/Ильназ.webp"
               width={640}
               height={640}
               alt="Ильназ"
-              className="rounded-2xl mb-3"
+              className="rounded-2xl mb-3 object-cover aspect-square"
             />
-            <h3 className="text-xl font-bold mb-1">Ильназ Салихов</h3>
-            <p className="text-accent">Fullstack разработчик</p>
+            <h3 className="text-xl font-bold mb-1 text-center">
+              Ильназ Салихов
+            </h3>
+            <p className="text-accent text-center">Fullstack разработчик</p>
           </div>
         </div>
+
         <Accordion className="flex flex-col gap-4" hideSeparator>
           <AccordionItem
             title="Управление проектами & консалтинг"
@@ -286,12 +297,12 @@ export default function Home() {
           />
         </Accordion>
       </section>
-      <section id="contacts" className="mt-10">
+      <section id="contacts" className="my-10">
         <h2 className="text-4xl font-bold text-accent mb-3">Контакты:</h2>
         <p className="text-xl mb-10">
           Готовы обсудить ваш проект и провести аудит бизнес-процессов.
         </p>
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-6">
           <ContactForm />
           <div className="flex flex-col">
             <div>

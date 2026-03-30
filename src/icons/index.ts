@@ -1,3 +1,5 @@
 export * from './BigLogo'
 export * from './Logo'
 export * from './CircleLogo'
+export * from './MenuIcon'
+export * from './XMarkIcon'

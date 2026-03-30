@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Header } from "@/src/components";
+import { Footer, Header } from "@/src/components";
 
 export const metadata: Metadata = {
   title: "ВЕБСОЛИД",
@@ -14,9 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru" className="h-full antialiased">
-      <body className="min-h-full max-w-300 mx-auto flex flex-col bg-[#E0E3FF] relative font-helvetica">
+      <body className="min-h-full max-w-300 mx-auto flex flex-col bg-[#E0E3FF] relative font-helvetica px-2">
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
