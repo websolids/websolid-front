@@ -17,7 +17,7 @@ export const BurgerMenu = () => {
           <Drawer.Dialog className="max-w-full w-full rounded-none bg-[#E0E3FF]">
             <Drawer.Header className="flex flex-row items-center justify-between">
               <Drawer.Heading>
-                <BigLogo className="h-10 w-fit" />
+                <BigLogo className="h-10 w-50" />
               </Drawer.Heading>
               <Button onPress={state.close} variant="ghost">
                 <XMarkIcon className="text-accent" />

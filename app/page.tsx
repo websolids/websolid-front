@@ -246,9 +246,7 @@ export default function Home() {
             <h3 className="text-xl font-bold mb-1 text-center">
               Камиль Салихов
             </h3>
-            <p className="text-accent text-center">
-              И швец, и жнец, и на дуде игрец
-            </p>
+            <p className="text-accent text-center">Техлид</p>
           </div>
 
           {/* Карточка 2 */}
