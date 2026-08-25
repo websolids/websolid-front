@@ -1,0 +1,2 @@
+import {Header,Footer} from '../components';
+export default function Blog(){return <><Header/><main className="inner"><div className="wrap"><p className="eyebrow"><i/> Блог</p><h1>Практика<br/><span>без усложнений</span></h1><p className="lede">Скоро здесь будут разборы проектов, процессов и технологий — с выводами, которые можно применить в бизнесе.</p><div className="empty-state"><b>Готовим первые материалы</b><p>О запуске интернет-магазина, интеграциях с 1С и выборе стека для веб-сервиса.</p></div></div></main><Footer/></>}
