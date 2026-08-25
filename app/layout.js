@@ -1,4 +1,6 @@
 import './globals.css';
+import '@fontsource-variable/manrope';
+import '@fontsource-variable/unbounded';
 
 export const metadata = {
   title: 'Вебсолид — веб-разработка для бизнеса',
