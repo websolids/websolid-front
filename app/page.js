@@ -1,17 +1,346 @@
-import Link from 'next/link';
-import {Header, Footer} from './components';
-import {services,cases,contacts} from './data';
+import Link from "next/link";
+import { Header, Footer } from "./components";
+import { services, cases, contacts } from "./data";
 
-export default function Home(){return <><Header/><main>
-  <section className="hero"><div className="wrap hero-grid"><div><p className="eyebrow"><i/> Веб-разработка для бизнеса</p><h1>Цифровые продукты,<br/><span>которые работают</span></h1><p className="hero-copy">Разбираемся в задаче бизнеса, находим точное решение и быстро доводим его до запуска.</p><div className="hero-actions"><Link className="button" href="#contact">Обсудить проект <span>↗</span></Link><Link className="text-link" href="#cases">Смотреть кейсы ↓</Link></div></div><div className="cube-stage" aria-hidden="true"><svg className="hero-cube" viewBox="0 0 420 430"><polygon className="face face-top" points="210,35 385,108 210,188 35,108"/><polygon className="face face-left" points="35,142 190,220 190,397 35,319"/><polygon className="face face-right" points="230,220 385,142 385,319 230,397"/></svg><span className="cube-message"><b>От идеи</b><i>→</i><b>к росту</b><small>быстро и по делу</small></span><span className="orbit o1">NEXT.JS</span><span className="orbit o2">UX / UI</span><span className="orbit o3">ИНТЕГРАЦИИ</span><span className="orbit o4">REACT</span><span className="orbit o5">TYPESCRIPT</span><span className="orbit o6">NODE.JS</span></div></div><div className="wrap proofbar"><div><b>2 дня</b><span>от потребности<br/>до договора</span></div><div><b>+15%</b><span>рост конверсии<br/>в проектах</span></div><div><b>1 команда</b><span>от аналитики<br/>до поддержки</span></div><p>Не просто пишем код.<br/><strong>Решаем задачу бизнеса.</strong></p></div></section>
+export default function Home() {
+  return (
+    <>
+      <Header />
+      <main>
+        <section className="hero">
+          <div className="wrap hero-grid">
+            <div>
+              <p className="eyebrow">
+                <i /> Веб-разработка для бизнеса
+              </p>
+              <h1>
+                Цифровые продукты,
+                <br />
+                <span>которые работают</span>
+              </h1>
+              <p className="hero-copy">
+                Разбираемся в задаче бизнеса, находим точное решение и быстро
+                доводим его до запуска.
+              </p>
+              <div className="hero-actions">
+                <Link className="button" href="#contact">
+                  Обсудить проект <span>↗</span>
+                </Link>
+                <Link className="text-link" href="#cases">
+                  Смотреть кейсы ↓
+                </Link>
+              </div>
+            </div>
+            <div className="cube-stage" aria-hidden="true">
+              <svg className="hero-cube" viewBox="0 0 420 430">
+                <polygon
+                  className="face face-top"
+                  points="210,35 385,108 210,188 35,108"
+                />
+                <polygon
+                  className="face face-left"
+                  points="35,142 190,220 190,397 35,319"
+                />
+                <polygon
+                  className="face face-right"
+                  points="230,220 385,142 385,319 230,397"
+                />
+              </svg>
+              <span className="cube-message">
+                <b>От идеи</b>
+                <i>→</i>
+                <b>к росту</b>
+                <small>быстро и по делу</small>
+              </span>
+              <span className="orbit o1">NEXT.JS</span>
+              <span className="orbit o2">UX / UI</span>
+              <span className="orbit o3">ИНТЕГРАЦИИ</span>
+              <span className="orbit o4">REACT</span>
+              <span className="orbit o5">TYPESCRIPT</span>
+              <span className="orbit o6">NODE.JS</span>
+            </div>
+          </div>
+          <div className="wrap proofbar">
+            <div>
+              <b>2 дня</b>
+              <span>
+                от потребности
+                <br />
+                до договора
+              </span>
+            </div>
+            <div>
+              <b>+15%</b>
+              <span>
+                рост конверсии
+                <br />в проектах
+              </span>
+            </div>
+            <div>
+              <b>1 команда</b>
+              <span>
+                от аналитики
+                <br />
+                до поддержки
+              </span>
+            </div>
+            <p>
+              Не просто пишем код.
+              <br />
+              <strong>Решаем задачу бизнеса.</strong>
+            </p>
+          </div>
+        </section>
 
-  <section id="services" className="section wrap"><div className="section-head"><p className="eyebrow"><i/> Что делаем</p><h2>Закрываем весь путь<br/>от идеи до результата</h2><p>Вы получаете не набор подрядчиков, а одну команду, которая понимает общую цель.</p></div><div className="service-grid">{services.map((s,i)=><Link href={`/services/${s.slug}`} className="service-card" key={s.slug}><span className="service-icon">{s.icon}</span><small>0{i+1}</small><h3>{s.title}</h3><p>{s.text}</p><b>Подробнее ↗</b></Link>)}</div></section>
+        <section id="services" className="section wrap">
+          <div className="section-head">
+            <p className="eyebrow">
+              <i /> Что делаем
+            </p>
+            <h2>
+              Закрываем весь путь
+              <br />
+              от идеи до результата
+            </h2>
+            <p>
+              Вы получаете не набор подрядчиков, а одну команду, которая
+              понимает общую цель.
+            </p>
+          </div>
+          <div className="service-grid">
+            {services.map((s, i) => (
+              <Link
+                href={`/services/${s.slug}`}
+                className="service-card"
+                key={s.slug}
+              >
+                <span className="service-icon">{s.icon}</span>
+                <small>0{i + 1}</small>
+                <h3>{s.title}</h3>
+                <p>{s.text}</p>
+                <b>Подробнее ↗</b>
+              </Link>
+            ))}
+          </div>
+        </section>
 
-  <section id="cases" className="cases"><div className="wrap"><div className="section-head inverted"><p className="eyebrow"><i/> Избранные проекты</p><h2>Результат виден<br/>не только на экране</h2></div>{cases.map((c,i)=><article className={`case-card ${c.tone}`} key={c.title}><div className="case-num">0{i+1}</div><div className="case-main"><p>{c.kicker}</p><h3>{c.title}</h3><p className="case-text">{c.text}</p><a href={c.href} target="_blank" rel="noreferrer">Открыть проект ↗</a></div><div className="case-result"><b>{c.result}</b><span>{c.resultText}</span></div><div className="case-art" aria-hidden="true"><span/><span/><span/></div></article>)}</div></section>
+        <section id="cases" className="cases">
+          <div className="wrap">
+            <div className="section-head inverted">
+              <p className="eyebrow">
+                <i /> Избранные проекты
+              </p>
+              <h2>
+                Результат виден
+                <br />
+                не только на экране
+              </h2>
+            </div>
+            {cases.map((c, i) => (
+              <article className={`case-card ${c.tone}`} key={c.slug}>
+                <div className="case-num">0{i + 1}</div>
+                <div className="case-main">
+                  <p>{c.kicker}</p>
+                  <h3>
+                    <Link href={`/projects/${c.slug}`}>{c.title}</Link>
+                  </h3>
+                  <p className="case-text">{c.text}</p>
+                  <Link href={`/projects/${c.slug}`}>
+                    Подробнее о проекте ↗
+                  </Link>
+                </div>
+                <div className="case-result">
+                  <b>{c.result}</b>
+                  <span>{c.resultText}</span>
+                </div>
+                <div className="case-art" aria-hidden="true">
+                  <span />
+                  <span />
+                  <span />
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
 
-  <section id="process" className="section wrap"><div className="section-head"><p className="eyebrow"><i/> Как работаем</p><h2>Быстро — потому что<br/>сначала думаем</h2></div><div className="process-grid"><div className="process-intro"><p>За первые два дня превращаем разговор о задаче в ясный план, документацию и договор.</p><div className="days"><b>48</b><span>часов до<br/>старта работ</span></div></div><ol><li><span>День 1</span><div><h3>Выявляем потребность</h3><p>Погружаемся в бизнес, пользователей и процессы. Фиксируем, какой результат действительно нужен.</p></div></li><li><span>День 2</span><div><h3>Проектируем решение</h3><p>Определяем состав продукта, этапы, сроки и бюджет. Готовим документы без недель ожидания.</p></div></li><li><span>Дальше</span><div><h3>Делаем и показываем</h3><p>Работаем короткими итерациями. Вы регулярно видите прогресс и управляете приоритетами.</p></div></li></ol></div></section>
+        <section id="process" className="section wrap">
+          <div className="section-head">
+            <p className="eyebrow">
+              <i /> Как работаем
+            </p>
+            <h2>
+              Быстро — потому что
+              <br />
+              сначала думаем
+            </h2>
+          </div>
+          <div className="process-grid">
+            <div className="process-intro">
+              <p>
+                За первые два дня превращаем разговор о задаче в ясный план,
+                документацию и договор.
+              </p>
+              <div className="days">
+                <b>48</b>
+                <span>
+                  часов до
+                  <br />
+                  старта работ
+                </span>
+              </div>
+            </div>
+            <ol>
+              <li>
+                <span>День 1</span>
+                <div>
+                  <h3>Выявляем потребность</h3>
+                  <p>
+                    Погружаемся в бизнес, пользователей и процессы. Фиксируем,
+                    какой результат действительно нужен.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span>День 2</span>
+                <div>
+                  <h3>Проектируем решение</h3>
+                  <p>
+                    Определяем состав продукта, этапы, сроки и бюджет. Готовим
+                    документы без недель ожидания.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span>Дальше</span>
+                <div>
+                  <h3>Делаем и показываем</h3>
+                  <p>
+                    Работаем короткими итерациями. Вы регулярно видите прогресс
+                    и управляете приоритетами.
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </section>
 
-  <section className="stack"><div className="wrap stack-grid"><div><p className="eyebrow"><i/> Технологии</p><h2>Современный стек.<br/>Без моды ради моды.</h2><p>Выбираем технологии под скорость, стабильность и дальнейшее развитие продукта.</p></div><div className="tech-cloud"><span>Next.js</span><span>React</span><span>TypeScript</span><span>Node.js</span><span>PostgreSQL</span><span>1С</span><span>Docker</span><span>REST API</span><span>Figma</span></div></div></section>
+        <section className="stack">
+          <div className="wrap stack-grid">
+            <div>
+              <p className="eyebrow">
+                <i /> Технологии
+              </p>
+              <h2>
+                Современный стек.
+                <br />
+                Без моды ради моды.
+              </h2>
+              <p>
+                Выбираем технологии под скорость, стабильность и дальнейшее
+                развитие продукта.
+              </p>
+            </div>
+            <div className="tech-cloud">
+              <span>Next.js</span>
+              <span>React</span>
+              <span>TypeScript</span>
+              <span>Node.js</span>
+              <span>PostgreSQL</span>
+              <span>1С</span>
+              <span>Docker</span>
+              <span>REST API</span>
+              <span>Figma</span>
+            </div>
+          </div>
+        </section>
 
-  <section id="contact" className="contact"><div className="wrap contact-grid"><div><p className="eyebrow light-eye"><i/> Начать проект</p><h2>Выберите удобный<br/>способ связи</h2><p>Напишите пару слов о задаче. Мы зададим уточняющие вопросы и предложим понятный следующий шаг — обычно отвечаем в течение часа в рабочее время.</p><div className="contact-facts"><div><b>Без брифа на 20 страниц</b><span>Для старта достаточно идеи или проблемы, которую нужно решить.</span></div><div><b>Первая оценка — бесплатно</b><span>Обсудим подход, возможные сроки и порядок бюджета.</span></div></div></div><div className="channel-panel"><p>Связаться с командой</p><div className="channel-list"><div className="channel-card"><span className="channel-icon">TG</span><div><b>{contacts.telegram}</b><small>Быстрый ответ и файлы</small></div><em>↗</em></div><div className="channel-card"><span className="channel-icon">WA</span><div><b>{contacts.whatsapp}</b><small>Для сообщений и звонков</small></div><em>↗</em></div><div className="channel-card"><span className="channel-icon">M</span><div><b>{contacts.max}</b><small>Российский мессенджер</small></div><em>↗</em></div><div className="channel-card"><span className="channel-icon">@</span><div><b>Электронная почта</b><small>{contacts.email}</small></div><em>↗</em></div></div><div className="channel-note"><span className="status-dot"/> Сейчас на связи · Пн–Пт, 09:00–18:00 МСК</div></div></div></section>
-  </main><Footer/></>}
+        <section id="contact" className="contact">
+          <div className="wrap contact-grid">
+            <div>
+              <p className="eyebrow light-eye">
+                <i /> Начать проект
+              </p>
+              <h2>
+                Выберите удобный
+                <br />
+                способ связи
+              </h2>
+              <p>
+                Напишите пару слов о задаче. Мы зададим уточняющие вопросы и
+                предложим понятный следующий шаг — обычно отвечаем в течение
+                часа в рабочее время.
+              </p>
+              <div className="contact-facts">
+                <div>
+                  <b>Без брифа на 20 страниц</b>
+                  <span>
+                    Для старта достаточно идеи или проблемы, которую нужно
+                    решить.
+                  </span>
+                </div>
+                <div>
+                  <b>Первая оценка — бесплатно</b>
+                  <span>
+                    Обсудим подход, возможные сроки и порядок бюджета.
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="channel-panel">
+              <p>Связаться с командой</p>
+              <div className="channel-list">
+                <a className="channel-card" href={`tel:${contacts.phoneRaw}`}>
+                  <span className="channel-icon">☏</span>
+                  <div>
+                    <b>{contacts.phone}</b>
+                    <small>Звонок по телефону</small>
+                  </div>
+                  <em>↗</em>
+                </a>
+                <a className="channel-card" href={`mailto:${contacts.email}`}>
+                  <span className="channel-icon">@</span>
+                  <div>
+                    <b>Электронная почта</b>
+                    <small>{contacts.email}</small>
+                  </div>
+                  <em>↗</em>
+                </a>
+                <a
+                  className="channel-card"
+                  href={contacts.maxLink}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span className="channel-icon">M</span>
+                  <div>
+                    <b>{contacts.max}</b>
+                    <small>{contacts.maxPhone} · Российский мессенджер</small>
+                  </div>
+                  <em>↗</em>
+                </a>
+                <a
+                  className="channel-card"
+                  href={contacts.telegramLink}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span className="channel-icon">TG</span>
+                  <div>
+                    <b>{contacts.telegram}</b>
+                    <small>Канал и быстрый ответ</small>
+                  </div>
+                  <em>↗</em>
+                </a>
+              </div>
+              <div className="channel-note">
+                <span className="status-dot" /> Сейчас на связи · Пн–Пт,
+                09:00–18:00 МСК
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
+}
