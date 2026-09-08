@@ -1,11 +1,14 @@
-import Script from 'next/script';
-import './globals.css';
-import '@fontsource-variable/manrope';
-import '@fontsource-variable/unbounded';
+import Script from "next/script";
+
+import "./globals.css";
+
+import "@fontsource-variable/manrope";
+import "@fontsource-variable/unbounded";
 
 export const metadata = {
-  title: 'Вебсолид — веб-разработка для бизнеса',
-  description: 'Сайты, интернет-магазины и веб-сервисы. От потребности до договора за 2 дня.',
+  title: "Вебсолид — веб-разработка для бизнеса",
+  description:
+    "Сайты, интернет-магазины и веб-сервисы. От потребности до договора за 2 дня.",
 };
 
 export default function RootLayout({ children }) {
@@ -18,25 +21,55 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{
             __html: `
               (function(m,e,t,r,i,k,a){
-                m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+                m[i]=m[i]||function(){
+                  (m[i].a=m[i].a||[]).push(arguments)
+                };
                 m[i].l=1*new Date();
-                for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-                k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-              })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=112384878', 'ym');
 
-              ym(112384878, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+                for (var j=0;j<document.scripts.length;j++){
+                  if(document.scripts[j].src===r){
+                    return;
+                  }
+                }
+
+                k=e.createElement(t);
+                a=e.getElementsByTagName(t)[0];
+                k.async=1;
+                k.src=r;
+                a.parentNode.insertBefore(k,a);
+              })(
+                window,
+                document,
+                'script',
+                'https://mc.yandex.ru/metrika/tag.js?id=112384878',
+                'ym'
+              );
+
+              ym(112384878, 'init', {
+                ssr: true,
+                webvisor: true,
+                clickmap: true,
+                ecommerce: 'dataLayer',
+                accurateTrackBounce: true,
+                trackLinks: true
+              });
             `,
           }}
         />
+
         <noscript>
           <div>
             <img
               src="https://mc.yandex.ru/watch/112384878"
-              style={{ position: 'absolute', left: '-9999px' }}
+              style={{
+                position: "absolute",
+                left: "-9999px",
+              }}
               alt=""
             />
           </div>
         </noscript>
+
         {children}
       </body>
     </html>
