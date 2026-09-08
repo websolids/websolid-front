@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { contacts } from "./data";
+import { useConsentContext } from "./CookieConsent";
 
 export function Logo() {
   return (
@@ -129,6 +130,7 @@ export function LeadForm() {
 }
 
 export function Footer() {
+  const { openSettings } = useConsentContext();
   return (
     <footer>
       <div className="wrap footer-grid">
@@ -161,7 +163,16 @@ export function Footer() {
       </div>
       <div className="wrap footline">
         <span>© 2026 Вебсолид</span>
-        <span>Собираем веб в работающую систему</span>
+        <span>
+          <Link href="/privacy">Конфиденциальность</Link>
+        </span>
+        <button
+          className="cookie-settings-link"
+          type="button"
+          onClick={openSettings}
+        >
+          Настройки cookies
+        </button>
       </div>
     </footer>
   );
